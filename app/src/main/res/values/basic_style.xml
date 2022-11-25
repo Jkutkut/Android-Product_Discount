@@ -4,7 +4,7 @@
     <dimen name="normal_margin">10dp</dimen>
 
     <!--  Text size  -->
-    <dimen name="text_size_title">20dp</dimen>
+    <dimen name="text_size_title">24dp</dimen>
     <dimen name="text_size_sub_title">18dp</dimen>
     <dimen name="text_size_normal">14dp</dimen>
     <dimen name="text_size_btn">@dimen/text_size_normal</dimen>
@@ -38,6 +38,13 @@
         <item name="android:scaleType">centerCrop</item>
         <item name="android:src">@drawable/ic_launcher_foreground</item>
         <item name="android:alpha">0.2</item>
+        <item name="contentDescription">Background</item>
+    </style>
+
+    <!--  Containers  -->
+    <style name="container" parent="use_margin.top">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
     <!--  Button  -->
@@ -55,10 +62,16 @@
         <item name="android:textSize">@dimen/text_size_txtv</item>
     </style>
 
+    <style name="txtv_style.title">
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <!--  Edit Text  -->
     <style name="etxt_style" parent="use_margin.top">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/text_size_etxt</item>
+        <item name="minHeight">48dp</item>
     </style>
 </resources>

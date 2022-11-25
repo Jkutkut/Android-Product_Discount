@@ -28,6 +28,7 @@
         <EditText
             android:id="@+id/etxtDiscount"
             style="@style/etxt_style"
+            android:maxLines="1"
             android:inputType="numberDecimal"
             android:hint="@string/etxtDiscountHint"/>
 
@@ -36,9 +37,8 @@
             style="@style/txtv_style"
             android:text="@string/txtvDiscountDebug"/>
 
-        <Button
+        <Button style="@style/btn_style"
             android:id="@+id/btnCalculate"
-            style="@style/btn_style"
             android:text="@string/btn_calculate"
             android:enabled="false"/>
     </LinearLayout>

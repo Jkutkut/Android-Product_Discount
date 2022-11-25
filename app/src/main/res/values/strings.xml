@@ -6,4 +6,12 @@
     <string name="txtvDiscountDebug">Final price with the discount: %1$.2f€</string>
     <string name="etxtDiscountHint">Discount percent</string>
     <string name="btn_calculate">Get discount</string>
+    <string name="product_selection_title">Product selection</string>
+    <string name="btn_search">Search</string>
+    <string name="etxt_product_code_hint">Enter the ID</string>
+    <string name="etxt_product_name_hint">Enter the name</string>
+    <string name="etxt_product_desc_hint">Enter the description</string>
+    <string name="etxt_product_price_hint">Enter the price</string>
+    <string name="btn_ok">Okay</string>
+    <string name="btn_cancel">Cancel</string>
 </resources>
