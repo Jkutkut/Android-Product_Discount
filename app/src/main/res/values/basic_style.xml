@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  ***************  DIMENS  ***************  -->
+    <dimen name="normal_margin">10dp</dimen>
+
+    <!--  Text size  -->
+    <dimen name="text_size_title">20dp</dimen>
+    <dimen name="text_size_sub_title">18dp</dimen>
+    <dimen name="text_size_normal">14dp</dimen>
+    <dimen name="text_size_btn">@dimen/text_size_normal</dimen>
+    <dimen name="text_size_txtv">@dimen/text_size_normal</dimen>
+    <dimen name="text_size_etxt">@dimen/text_size_normal</dimen>
+
+    <!--  ***************  STYLES  ***************  -->
+    <!--  Margins  -->
+    <style name="use_margin"/>
+
+    <style name="use_margin.top">
+        <item name="android:layout_marginTop">@dimen/normal_margin</item>
+    </style>
+    <style name="use_margin.bottom">
+        <item name="android:layout_marginBottom">@dimen/normal_margin</item>
+    </style>
+
+    <!--  Activity  -->
+    <style name="activity_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">@dimen/normal_margin</item>
+        <item name="android:layout_marginLeft">@dimen/normal_margin</item>
+        <item name="android:layout_marginRight">@dimen/normal_margin</item>
+    </style>
+
+    <style name="activity_background">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@drawable/ic_launcher_foreground</item>
+        <item name="android:alpha">0.2</item>
+    </style>
+
+    <!--  Button  -->
+    <style name="btn_style" parent="use_margin.top">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/basic_btn</item>
+        <item name="android:textSize">@dimen/text_size_btn</item>
+    </style>
+
+    <!--  Text View  -->
+    <style name="txtv_style" parent="use_margin.top">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_txtv</item>
+    </style>
+
+    <!--  Edit Text  -->
+    <style name="etxt_style" parent="use_margin.top">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_etxt</item>
+    </style>
+</resources>

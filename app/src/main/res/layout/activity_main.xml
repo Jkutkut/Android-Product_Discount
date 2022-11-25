@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView style="@style/activity_background" />
+
+    <LinearLayout
+        style="@style/activity_style"
+        android:orientation="vertical"
+        android:weightSum="10">
+        <Button
+            android:id="@+id/btnSelectProduct"
+            style="@style/btn_style"
+            android:text="@string/btn_select_product">
+        </Button>
+
+        <TextView
+            android:id="@+id/txtvProduct"
+            style="@style/txtv_style"
+            android:text="@string/txtvProductDebug"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/etxtDiscount"
+            style="@style/etxt_style"
+            android:inputType="numberDecimal"
+            android:hint="@string/etxtDiscountHint"/>
+
+        <TextView
+            android:id="@+id/txtvDiscount"
+            style="@style/txtv_style"
+            android:text="@string/txtvDiscountDebug"/>
+
+        <Button
+            android:id="@+id/btnCalculate"
+            style="@style/btn_style"
+            android:text="@string/btn_calculate"
+            android:enabled="false"/>
+    </LinearLayout>
+</RelativeLayout>
