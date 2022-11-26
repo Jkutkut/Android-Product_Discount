@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.jkutkut.productdiscount.javabean.Product;
+
 public class MainActivity extends AppCompatActivity {
 
     // ******** UI Components ********
@@ -22,10 +24,14 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityResultLauncher<Intent> selectProduct;
 
+    private Product product;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        product = null;
 
         // ******** UI Components ********
         btnSelectProduct = findViewById(R.id.btnSelectProduct);
@@ -34,14 +40,18 @@ public class MainActivity extends AppCompatActivity {
         txtvDiscount = findViewById(R.id.txtvDiscount);
         btnCalculate = findViewById(R.id.btnCalculate);
 
+        // ******** UI ********
+        updateUI();
+
+        // ******** Controller ********
+
         selectProduct = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> {
                     if (result.getResultCode() == RESULT_OK) {
                         toastUser("Product selected");
                         // Get data from intent
-                        String test = result.getData().getStringExtra("test");
-                        toastUser(test);
+                        product = (Product) result.getData().getSerializableExtra("product");
                     }
                     else {
                         // TODO
@@ -57,6 +67,22 @@ public class MainActivity extends AppCompatActivity {
         btnCalculate.setOnClickListener(v -> {
             // TODO
         });
+    }
+
+    private void updateUI() {
+        if (product == null) {
+            txtvProduct.setText("No product selected");
+            txtvDiscount.setText("");
+        }
+        else {
+            txtvProduct.setText(String.format(
+                getString(R.string.txtvProductFilled),
+                product.getId(),
+                product.getName(),
+                product.getDescription(),
+                product.getPrice()
+            ));
+        }
     }
 
     private void toastUser(String str) {

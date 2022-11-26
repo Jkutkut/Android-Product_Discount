@@ -22,8 +22,7 @@
         <TextView
             android:id="@+id/txtvProduct"
             style="@style/txtv_style"
-            android:text="@string/txtvProductDebug"
-            android:layout_weight="1"/>
+            android:layout_weight="7"/>
 
         <EditText
             android:id="@+id/etxtDiscount"
@@ -34,8 +33,7 @@
 
         <TextView
             android:id="@+id/txtvDiscount"
-            style="@style/txtv_style"
-            android:text="@string/txtvDiscountDebug"/>
+            style="@style/txtv_style"/>
 
         <Button style="@style/btn_style"
             android:id="@+id/btnCalculate"

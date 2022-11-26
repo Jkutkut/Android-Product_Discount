@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.jkutkut.productdiscount.data.Products;
+
 public class ProductSelection extends AppCompatActivity {
 
     // ******** UI Components ********
@@ -18,10 +20,14 @@ public class ProductSelection extends AppCompatActivity {
     private Button btnOk;
     private Button btnCancel;
 
+    private Products products;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_selection);
+
+        products = new Products();
 
         // ******** UI Components ********
         etxtCode = findViewById(R.id.etxtCode);
@@ -45,7 +51,7 @@ public class ProductSelection extends AppCompatActivity {
         // TODO
 
         Intent data = new Intent();
-        data.putExtra("test", "testValue");
+        data.putExtra("product", products.getProduct(""));
         setResult(RESULT_OK, data);
         finish();
     }
