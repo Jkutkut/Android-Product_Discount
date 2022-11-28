@@ -20,6 +20,10 @@ public class Products {
         return null;
     }
 
+    public Product getRandomProduct() {
+        return products.get((int) (Math.random() * products.size()));
+    }
+
     private void loadTestData() {
         products.add(
             new Product(

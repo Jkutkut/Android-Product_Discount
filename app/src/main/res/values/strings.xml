@@ -15,4 +15,6 @@
     <string name="btn_cancel">Cancel</string>
     <string name="product_selected">Product selected</string>
     <string name="invalid_percent">Invalid discount</string>
+    <string name="empty_code">Please enter the id</string>
+    <string name="product_not_found">Product not found</string>
 </resources>

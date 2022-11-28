@@ -32,15 +32,18 @@
 
         <EditText style="@style/etxt_style"
             android:id="@+id/etxtName"
+            android:enabled="false"
             android:maxLines="1"
             android:hint="@string/etxt_product_name_hint" />
 
         <EditText style="@style/etxt_style"
             android:id="@+id/etxtDesc"
+            android:enabled="false"
             android:hint="@string/etxt_product_desc_hint" />
 
         <EditText style="@style/etxt_style"
             android:id="@+id/etxtPrice"
+            android:enabled="false"
             android:inputType="numberDecimal"
             android:maxLines="1"
             android:hint="@string/etxt_product_price_hint" />
@@ -56,6 +59,7 @@
             android:id="@+id/btnOk"
             android:layout_weight="1"
             android:text="@string/btn_ok"
+            android:enabled="false"
             android:layout_marginEnd="@dimen/normal_margin"/>
 
         <Button style="@style/btn_style"
