@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_select_product">Seleccionar producto</string>
+    <string name="txtvProductFilled">Código: %1$s  %2$s  Descripción: %3$s  Precio: %4$.2f€</string>
+    <string name="txtvDiscount">Precio final con el descuento: %1$.2f€</string>
+    <string name="etxtDiscountHint">Porcentaje de descuento</string>
+    <string name="btn_calculate">Obtener descuento</string>
+    <string name="product_selection_title">Selección de producto</string>
+    <string name="btn_search">Buscar</string>
+    <string name="etxt_product_code_hint">Introduce el ID</string>
+    <string name="etxt_product_name_hint">Nombre</string>
+    <string name="etxt_product_desc_hint">Descrición</string>
+    <string name="etxt_product_price_hint">Precio</string>
+    <string name="btn_ok">Aceptar</string>
+    <string name="btn_cancel">Cancelar</string>
+    <string name="product_selected">Producto selecionado</string>
+    <string name="invalid_percent">Descuento inválido</string>
+    <string name="empty_code">Introduce el ID</string>
+    <string name="product_not_found">Producto no encontrado</string>
+</resources>
