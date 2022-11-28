@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name" translatable="false">ProductDiscount</string>
     <string name="btn_select_product">Select product</string>
-    <string name="txtvProductFilled">Code: %1$s  %2$s  Description: %3$s  Price: %4$.2f€</string>
+    <string name="txtvProductFilled">Code: %1$s\n\n%2$s\n\nDescription: %3$s\n\nPrice: %4$.2f€</string>
     <string name="txtvDiscount">Final price with the discount: %1$.2f€</string>
     <string name="etxtDiscountHint">Discount percent</string>
     <string name="btn_calculate">Get discount</string>

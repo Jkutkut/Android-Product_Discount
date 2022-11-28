@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="btn_select_product">Seleccionar producto</string>
-    <string name="txtvProductFilled">Código: %1$s  %2$s  Descripción: %3$s  Precio: %4$.2f€</string>
+    <string name="txtvProductFilled">Código: %1$s\n\n%2$s\n\nDescripción: %3$s\n\nPrecio: %4$.2f€</string>
     <string name="txtvDiscount">Precio final con el descuento: %1$.2f€</string>
     <string name="etxtDiscountHint">Porcentaje de descuento</string>
     <string name="btn_calculate">Obtener descuento</string>

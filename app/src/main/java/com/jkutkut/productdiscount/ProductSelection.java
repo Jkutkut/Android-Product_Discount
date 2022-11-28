@@ -73,12 +73,15 @@ public class ProductSelection extends AppCompatActivity {
     private void updateUI() {
         if (product == null) {
             btnOk.setEnabled(false);
-            etxtName.setText("");
-            etxtDesc.setText("");
-            etxtPrice.setText("");
+            etxtName.setVisibility(EditText.INVISIBLE);
+            etxtDesc.setVisibility(EditText.INVISIBLE);
+            etxtPrice.setVisibility(EditText.INVISIBLE);
         }
         else {
             btnOk.setEnabled(true);
+            etxtName.setVisibility(EditText.VISIBLE);
+            etxtDesc.setVisibility(EditText.VISIBLE);
+            etxtPrice.setVisibility(EditText.VISIBLE);
             etxtCode.setText(product.getId());
             etxtName.setText(product.getName());
             etxtDesc.setText(product.getDescription());
