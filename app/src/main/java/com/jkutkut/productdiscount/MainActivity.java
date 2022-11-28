@@ -62,6 +62,12 @@ public class MainActivity extends AppCompatActivity {
             selectProduct.launch(i);
         });
 
+        btnSelectProduct.setOnLongClickListener(v -> {
+            product = null;
+            updateUI();
+            return true;
+        });
+
         btnCalculate.setOnClickListener(v -> {
             float percent = Float.parseFloat(etxtDiscount.getText().toString());
             if (percent < 0 || percent > 100) {
