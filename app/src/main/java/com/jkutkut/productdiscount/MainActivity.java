@@ -49,12 +49,10 @@ public class MainActivity extends AppCompatActivity {
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> {
                     if (result.getResultCode() == RESULT_OK) {
-                        toastUser("Product selected");
+                        toastUser(getString(R.string.product_selected));
                         // Get data from intent
-                        product = (Product) result.getData().getSerializableExtra("product");
-                    }
-                    else {
-                        // TODO
+                        product = (Product) result.getData().getSerializableExtra(ProductSelection.PRODUCT);
+                        updateUI();
                     }
                 }
         );
@@ -65,16 +63,29 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnCalculate.setOnClickListener(v -> {
-            // TODO
+            float percent = Float.parseFloat(etxtDiscount.getText().toString());
+            if (percent < 0 || percent > 100) {
+                toastUser(getString(R.string.invalid_percent));
+                return;
+            }
+            float discount = product.getPrice() * percent / 100;
+            float price = product.getPrice() - discount;
+            txtvDiscount.setText(String.format(
+                getString(R.string.txtvDiscount),
+                price
+            ));
         });
     }
 
     private void updateUI() {
         if (product == null) {
-            txtvProduct.setText("No product selected");
-            txtvDiscount.setText("");
+            etxtDiscount.setEnabled(false);
+            btnCalculate.setEnabled(false);
+            txtvProduct.setText("");
         }
         else {
+            etxtDiscount.setEnabled(true);
+            btnCalculate.setEnabled(true);
             txtvProduct.setText(String.format(
                 getString(R.string.txtvProductFilled),
                 product.getId(),
@@ -83,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 product.getPrice()
             ));
         }
+        txtvDiscount.setText("");
     }
 
     private void toastUser(String str) {

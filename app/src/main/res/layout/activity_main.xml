@@ -27,6 +27,7 @@
         <EditText
             android:id="@+id/etxtDiscount"
             style="@style/etxt_style"
+            android:enabled="false"
             android:maxLines="1"
             android:inputType="numberDecimal"
             android:hint="@string/etxtDiscountHint"/>

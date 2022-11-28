@@ -11,6 +11,7 @@ import com.jkutkut.productdiscount.data.Products;
 
 public class ProductSelection extends AppCompatActivity {
 
+    public static final String PRODUCT = "product";
     // ******** UI Components ********
     private EditText etxtCode;
     private EditText etxtName;
@@ -51,7 +52,7 @@ public class ProductSelection extends AppCompatActivity {
         // TODO
 
         Intent data = new Intent();
-        data.putExtra("product", products.getProduct(""));
+        data.putExtra(PRODUCT, products.getProduct("2096/289"));
         setResult(RESULT_OK, data);
         finish();
     }

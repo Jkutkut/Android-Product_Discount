@@ -13,4 +13,6 @@
     <string name="etxt_product_price_hint">Enter the price</string>
     <string name="btn_ok">Okay</string>
     <string name="btn_cancel">Cancel</string>
+    <string name="product_selected">Product selected</string>
+    <string name="invalid_percent">Invalid discount</string>
 </resources>
